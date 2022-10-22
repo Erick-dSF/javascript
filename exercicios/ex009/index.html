@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    <p>
+        <label for="pais">Em que pais voçê mora?</label>
+        <input type="text" name="pais" id="pais">
+    </p>
+    <p id="result"></p>
+    <input type="button" value="Verificar" onclick="calcular()">
+
+    <script>
+        function calcular(){
+            var pais = document.getElementById('pais').value
+            var resultado = document.getElementById('result')
+
+            resultado.innerHTML = `<p>Voçê vive no(a) <strong>${pais}</strong></p>`
+            if(pais == 'brasil'){
+                resultado.innerHTML += `<p>Voçê é <strong>Brasileiro</strong></p>`
+            }else{
+                resultado.innerHTML += `<p>Voçê é <strong>Estrangeiro</strong></p>`
+            }
+            
+        }
+    </script>
+</body>
+</html>
